@@ -1,0 +1,11 @@
+{
+  "total": 3569,
+  "correct": 2384,
+  "accuracy": 0.6679742224712805,
+  "sell_total": 83,
+  "sell_accuracy": 0.8192771084337349,
+  "buy_total": 104,
+  "buy_accuracy": 0.21153846153846154,
+  "sell_correct": 68,
+  "buy_correct": 22
+}
