@@ -635,17 +635,18 @@ def run_health_server():
     print(f"✅ Starting health server on port {port}")
     health_app.run(host='0.0.0.0', port=port, debug=False, use_reloader=False)
 
-# تشغيل الخادم الصحي في خلفية
-health_thread = threading.Thread(target=run_health_server, daemon=True)
-health_thread.start()
-print("✅ Health check server started")
+if __name__ == '__main__':
+    # تشغيل الخادم الصحي في خلفية
+    health_thread = threading.Thread(target=run_health_server, daemon=True)
+    health_thread.start()
+    print("✅ Health check server started")
 
-# ========== التشغيل الرئيسي ==========
-print("=" * 60)
-print(f"🎯 البوت المتعلم يعمل!")
-print(f"📊 تم تحميل {len(MAIN_COINS)} عملة")
-print(f"📈 نسبة النجاح الحالية: {performance['accuracy']:.1%}")
-print("=" * 60)
+    # ========== التشغيل الرئيسي ==========
+    print("=" * 60)
+    print(f"🎯 البوت المتعلم يعمل!")
+    print(f"📊 تم تحميل {len(MAIN_COINS)} عملة")
+    print(f"📈 نسبة النجاح الحالية: {performance['accuracy']:.1%}")
+    print("=" * 60)
 
-# تشغيل البوت
-bot.infinity_polling()
+    # تشغيل البوت
+    bot.infinity_polling()
